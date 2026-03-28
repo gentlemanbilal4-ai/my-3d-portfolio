@@ -8,6 +8,7 @@ import "./styles/SocialIcons.css";
 import { TbNotes } from "react-icons/tb";
 import { useEffect } from "react";
 import HoverLinks from "./HoverLinks";
+import { profile } from "../data/portfolioData";
 
 const SocialIcons = () => {
   useEffect(() => {
@@ -60,49 +61,28 @@ const SocialIcons = () => {
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
         <span>
-          <a
-            href="https://github.com/akashrmalhotra"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href={profile.githubHref} target="_blank" rel="noreferrer">
             <FaGithub />
           </a>
         </span>
         <span>
-          <a
-            href="https://www.linkedin.com/in/akashrmalhotra/"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href={profile.linkedinHref} target="_blank" rel="noreferrer">
             <FaLinkedinIn />
           </a>
         </span>
         <span>
-          <a
-            href="https://www.youtube.com/@Leftbraincoder"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href={profile.youtubeHref} target="_blank" rel="noreferrer">
             <FaYoutube />
           </a>
         </span>
         <span>
-          <a
-            href="https://www.instagram.com/leftbraincoder/"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href={profile.instagramHref} target="_blank" rel="noreferrer">
             <FaInstagram />
           </a>
         </span>
       </div>
-      <a
-        className="resume-button"
-        href="/Akash_Malhotra.pdf"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <HoverLinks text="RESUME" />
+      <a className="resume-button" href={profile.udemyHref} target="_blank" rel="noreferrer">
+        <HoverLinks text="UDEMY" />
         <span>
           <TbNotes />
         </span>

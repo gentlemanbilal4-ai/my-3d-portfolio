@@ -2,37 +2,7 @@ import { useState, useCallback } from "react";
 import "./styles/Work.css";
 import WorkImage from "./WorkImage";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
-
-const projects = [
-  {
-    title: "CallHQ",
-    category: "Voice AI Calling Platform",
-    tools: "Voice AI, Calling Automation, CRM Integrations",
-    image: "/images/callhq.png",
-    link: "https://callhq.ai",
-  },
-  {
-    title: "Whatsapp Automation",
-    category: "WABA Application",
-    tools: "WhatsApp Business API, Workflow Automation, Notifications",
-    image: "/images/whatsapp.png",
-    link: "https://whatsapp.callhq.ai",
-  },
-  {
-    title: "Broki",
-    category: "Real Estate Platform for FnB Industry",
-    tools: "Property Discovery, Lead Management, Marketplace Workflows",
-    image: "/images/broki.png",
-    link: "https://broki.in",
-  },
-  {
-    title: "Orrdr.com",
-    category: "Ecommerce Platform and Mobile App",
-    tools: "Ecommerce, Mobile Experience, Order Management",
-    image: "/images/orrdr.png",
-    link: "https://orrdr.com",
-  },
-];
+import { projectCards } from "../data/portfolioData";
 
 const Work = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -50,13 +20,13 @@ const Work = () => {
 
   const goToPrev = useCallback(() => {
     const newIndex =
-      currentIndex === 0 ? projects.length - 1 : currentIndex - 1;
+      currentIndex === 0 ? projectCards.length - 1 : currentIndex - 1;
     goToSlide(newIndex);
   }, [currentIndex, goToSlide]);
 
   const goToNext = useCallback(() => {
     const newIndex =
-      currentIndex === projects.length - 1 ? 0 : currentIndex + 1;
+      currentIndex === projectCards.length - 1 ? 0 : currentIndex + 1;
     goToSlide(newIndex);
   }, [currentIndex, goToSlide]);
 
@@ -94,7 +64,7 @@ const Work = () => {
                 transform: `translateX(-${currentIndex * 100}%)`,
               }}
             >
-              {projects.map((project, index) => (
+              {projectCards.map((project, index) => (
                 <div className="carousel-slide" key={index}>
                   <div className="carousel-content">
                     <div className="carousel-info">
@@ -127,7 +97,7 @@ const Work = () => {
 
           {/* Dot Indicators */}
           <div className="carousel-dots">
-            {projects.map((_, index) => (
+            {projectCards.map((_, index) => (
               <button
                 key={index}
                 className={`carousel-dot ${index === currentIndex ? "carousel-dot-active" : ""

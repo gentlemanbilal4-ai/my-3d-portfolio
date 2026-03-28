@@ -2,6 +2,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { SplitText } from "gsap/SplitText";
+import { waitForFonts } from "./waitForFonts";
 
 interface ParaElement extends HTMLElement {
   anim?: gsap.core.Animation;
@@ -10,9 +11,19 @@ interface ParaElement extends HTMLElement {
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
-export default function setSplitText() {
+let splitTextRunId = 0;
+
+export default async function setSplitText() {
+  const runId = ++splitTextRunId;
   ScrollTrigger.config({ ignoreMobileResize: true });
   if (window.innerWidth < 900) return;
+
+  await waitForFonts();
+
+  if (runId !== splitTextRunId) {
+    return;
+  }
+
   const paras: NodeListOf<ParaElement> = document.querySelectorAll(".para");
   const titles: NodeListOf<ParaElement> = document.querySelectorAll(".title");
 
@@ -76,5 +87,5 @@ export default function setSplitText() {
     );
   });
 
-  ScrollTrigger.addEventListener("refresh", () => setSplitText());
+  ScrollTrigger.refresh();
 }

@@ -1,8 +1,11 @@
 import { SplitText } from "gsap/SplitText";
 import gsap from "gsap";
 import { smoother } from "../Navbar";
+import { waitForFonts } from "./waitForFonts";
 
-export function initialFX() {
+export async function initialFX() {
+  await waitForFonts();
+
   document.body.style.overflowY = "auto";
   smoother.paused(false);
   document.getElementsByTagName("main")[0].classList.add("main-active");

@@ -168,6 +168,28 @@
   border-radius: 50%;
 }
 
+.character-fallback {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 140px;
+  pointer-events: none;
+}
+
+.character-fallback span {
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(94, 234, 212, 0.25);
+  background: rgba(10, 14, 23, 0.7);
+  backdrop-filter: blur(12px);
+  color: rgba(234, 229, 236, 0.92);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+}
+
 .landing-intro {
   position: absolute;
   z-index: 9;
