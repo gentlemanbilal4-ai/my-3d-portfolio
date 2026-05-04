@@ -1,142 +1,75 @@
 export const profile = {
-  initials: "MK",
-  firstName: "MUHAMMAD",
-  lastName: "KAMRAN",
-  title: "Muhammad Kamran — Blockchain Developer",
-  email: "knowledpoint202@gmail.com",
-  phone: "+92 311 8262934",
-  phoneHref: "tel:+923118262934",
-  emailHref: "mailto:knowledpoint202@gmail.com",
-  address:
-    "House No 443, Street No 7, Bhittai Colony, Korangi Creek, Karachi, Pakistan",
-  location: "Karachi, Pakistan",
-  nationality: "Pakistani",
-  birthDate: "12 August 1998",
-  gender: "Male",
-  rolePrefix: "Blockchain",
+  initials: "BILAL X NOVA",
+  firstName: "BILAL",
+  lastName: "X NOVA",
+  title: "Bilal X Nova — Editor & Digital Marketer",
+  email: "gentlemanbilal4@gmail.com",
+  emailHref: "mailto:gentlemanbilal4@gmail.com",
+  rolePrefix: "Editor",
   rolePrimary: "Developer",
-  roleSecondary: "Researcher",
+  roleSecondary: "Digital Marketer",
   about:
-    "Highly skilled and results-driven Blockchain Developer with 5+ years of experience architecting, developing, and deploying secure, scalable blockchain solutions. My work spans Ethereum, NFT marketplaces, DeFi protocols, custom blockchain architecture, wallet and explorer development, and research-led innovation focused on blockchain security, decentralization, and real-world adoption.",
-  mapHref:
-    "https://www.google.com/maps/search/?api=1&query=House+No+443+Street+No+7+Bhittai+Colony+Korangi+Creek+Karachi+Pakistan",
-  githubHref: "https://github.com/Kamrankamil",
-  linkedinHref: "https://pk.linkedin.com/in/kamran-khan-788874187",
-  linkedinLabel: "linkedin.com/in/kamran-khan-788874187",
-  youtubeHref: "https://www.youtube.com/@blocklearners",
-  instagramHref: "https://www.instagram.com/kamrankamil",
-  instagramLabel: "@kamrankamil",
-  udemyHref:
-    "https://www.udemy.com/user/muhammad-kamran-kamil/?srsltid=AfmBOor6BoWobHcM_bpRU1-LBRS_VkIisWKOAFUfCVwP2b5-gz2-xu_b",
+    "I'm a creative digital professional specializing in 3D art, video editing, and visual storytelling. I combine technical expertise with a strong creative vision to deliver high-quality content across multiple platforms. With hands-on experience in tools like Adobe Photoshop, After Effects, Premiere Pro, Blender, and Unreal Engine, I create engaging visuals, CGI, and VFX that stand out. I also work in digital marketing, running Meta, TikTok, and Snapchat ad campaigns with a focus on performance and growth. Beyond design, I'm passionate about web development and automation, constantly exploring ways to streamline workflows and build scalable digital solutions. As a co-founder, I understand both the creative and business sides of digital work. Driven by curiosity, I'm always learning, improving, and pushing my skills to the next level.",
+  linkedinHref: "https://www.linkedin.com/in/gentlemanbilal",
+  linkedinLabel: "linkedin.com/in/gentlemanbilal",
+  instagramHref: "https://www.instagram.com/gentleman_bilal",
+  instagramLabel: "gentleman_bilal",
 } as const;
 
 export const careerEntries = [
   {
-    role: "Sub-Lead & Software Engineer",
-    company: "DTS INC. Pakistan",
-    meta: "Blockchain Developer · Karachi",
-    period: "2021–NOW",
+    role: "Creative Editor & Designer",
+    company: "Freelance",
+    meta: "Video & Photo Editing",
+    period: "2020 — 2022",
     description:
-      "Led and supported proprietary blockchain development on a Proof-of-Authority consensus model, customized wallet and explorer platforms from open-source foundations, built a 3D NFT marketplace, deployed smart contracts and crypto tokens, optimized mining tools, and co-authored international blockchain research publications.",
+      "Started my journey in video and photo editing using Adobe Photoshop, Premiere Pro, and After Effects. Focused on creating high-quality visuals, smooth edits, and engaging digital content.",
   },
   {
-    role: "Lab Instructor (Part-Time)",
-    company: "Iqra University",
-    meta: "Computer Science Labs · Karachi",
-    period: "2024–NOW",
+    role: "3D Artist & Visual Creator",
+    company: "Freelance",
+    meta: "3D Design & CGI",
+    period: "2022 — 2023",
     description:
-      "Teach undergraduate lab sessions in Database Management Systems, Object-Oriented Programming in Java, and Data Structures, with emphasis on implementation, normalization, ERD design, and hands-on problem solving.",
+      "Expanded into 3D design and CGI using Blender and Unreal Engine. Created realistic environments, animations, and cinematic visual experiences.",
   },
   {
-    role: "Web Developer",
-    company: "Brainzix Technology",
-    meta: "Full-Stack Web Development · Karachi",
-    period: "2020–21",
+    role: "Digital Marketer, Web Developer & Creative Specialist",
+    company: "Co-Founder",
+    meta: "Full-Stack Digital Professional",
+    period: "2023 — 2026 (Now)",
     description:
-      "Delivered WordPress, PHP, and JavaScript solutions for 15+ clients, improving website performance and handling full-stack implementation across client projects.",
+      "Working as a multi-skilled digital professional — handling paid ads (Meta, TikTok, Snapchat), web development (frontend & backend), and high-quality creative work including video editing, photo editing, and 3D visuals. Focused on building complete digital solutions that drive growth and engagement.",
   },
 ] as const;
 
 export const serviceCards = [
   {
-    title: "BLOCKCHAIN ENGINEERING",
-    subtitle: "Architecture, Smart Contracts, and DApps",
+    title: "CREATIVE DESIGN & 3D VISUALS",
+    subtitle: "Blender, Unreal Engine, Character Creator & iClone",
     description:
-      "I design and build blockchain products end to end—from consensus architecture and wallet tooling to NFT marketplaces, explorers, token contracts, and production-ready decentralized applications.",
-    tags: [
-      "Ethereum",
-      "Solidity",
-      "PoA & PoW",
-      "ERC-20 / 721 / 1155",
-      "MetaMask customization",
-      "Blockscout",
-    ],
+      "I create high-quality 3D visuals, CGI, and VFX using Blender, Unreal Engine, Character Creator, and iClone — focused on realistic environments, character design, and cinematic storytelling.",
+    tags: ["Blender", "Unreal Engine", "Character Creator", "iClone", "CGI", "VFX"],
   },
   {
-    title: "RESEARCH & TEACHING",
-    subtitle: "Security, Scalability, and Applied CS",
+    title: "DIGITAL MARKETING & PAID ADS",
+    subtitle: "Meta Ads, TikTok Ads & Snapchat Campaigns",
     description:
-      "I combine product delivery with research and teaching—covering blockchain security, voting-based chains, database systems, OOP, data structures, and blockchain data analytics for real-world systems.",
-    tags: [
-      "Blockchain security",
-      "Consensus mechanisms",
-      "Java & SQL labs",
-      "TensorFlow & Keras",
-      "Web3.js / Web3.py",
-      "Data analytics",
-    ],
-  },
-] as const;
-
-type ProjectCard = {
-  title: string;
-  category: string;
-  tools: string;
-  image: string;
-  link?: string;
-};
-
-export const projectCards: ProjectCard[] = [
-  {
-    title: "PoA Blockchain",
-    category: "Custom Blockchain Architecture",
-    tools: "Proof-of-Authority, consensus design, secure deployment, ecosystem tooling",
-    image: "/images/bond.png",
+      "I run and optimize high-performing ad campaigns, focusing on reach, conversions, and growth using data-driven strategies.",
+    tags: ["Meta Ads", "TikTok Ads", "Snapchat Campaigns", "Performance Marketing", "Analytics", "Growth"],
   },
   {
-    title: "Custom Wallet",
-    category: "MetaMask-Based Wallet Product",
-    tools: "Wallet customization, transaction flows, ecosystem integration, user security",
-    image: "/images/radix.png",
+    title: "WEB DEVELOPMENT & DESIGN",
+    subtitle: "Frontend, Backend & UI/UX Design",
+    description:
+      "I build modern, responsive websites with strong frontend and backend development, while designing clean and user-friendly interfaces that deliver smooth user experiences.",
+    tags: ["Frontend", "Backend", "UI/UX Design", "React", "Responsive Design", "Automation"],
   },
   {
-    title: "3D NFT Marketplace",
-    category: "ERC-20, ERC-721, ERC-1155 Marketplace",
-    tools: "Bidding, buying, selling, Web3 integrations, marketplace workflows",
-    image: "/images/sapphire.png",
+    title: "VIDEO & PHOTO EDITING",
+    subtitle: "Adobe Premiere Pro, After Effects & Photoshop",
+    description:
+      "I produce professional video edits, motion graphics, and high-end photo manipulations using Adobe Premiere Pro, After Effects, and Photoshop — ensuring clean visuals, smooth transitions, and engaging content.",
+    tags: ["Premiere Pro", "After Effects", "Photoshop", "Motion Graphics", "Color Grading", "VFX"],
   },
-  {
-    title: "Explorer & Mining Tools",
-    category: "Blockchain Visibility and Mining Infrastructure",
-    tools: "Blockscout fork, explorer customization, mining apps, mining pool optimization",
-    image: "/images/Solidx.png",
-  },
-] as const;
-
-export const education = [
-  "BS Computer Science, Iqra University Main Campus — 2017–2021",
-  "Intermediate, ZM Nabi Bagh College",
-] as const;
-
-export const publications = [
-  'IEEE GCCE 2025 — “Late Transaction Settlement on PoA Voting Blockchain for Higher Security Crypto Token Transfer”',
-  'IEEE GCCE 2024 — “Representative Node on Voting Blockchain for High Secure Mobile Wallet Users”',
-] as const;
-
-export const certifications = [
-  "Certified in Information Technology (2020–2021)",
-  "Certified in WordPress Development",
-  "AWS Solutions Architect – Certified",
-  "Data Science Specialization (Udemy — Ongoing)",
-  "Blockchain Specialization (Udemy)",
 ] as const;
