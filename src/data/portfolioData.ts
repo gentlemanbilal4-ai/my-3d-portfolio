@@ -19,7 +19,7 @@ export const profile = {
 export const careerEntries = [
   {
     role: "Creative Editor & Designer",
-    company: "Freelance",
+    company: "",
     meta: "Video & Photo Editing",
     period: "2020 — 2022",
     description:
@@ -27,7 +27,7 @@ export const careerEntries = [
   },
   {
     role: "3D Artist & Visual Creator",
-    company: "Freelance",
+    company: "",
     meta: "3D Design & CGI",
     period: "2022 — 2023",
     description:
@@ -35,7 +35,7 @@ export const careerEntries = [
   },
   {
     role: "Digital Marketer, Web Developer & Creative Specialist",
-    company: "Co-Founder",
+    company: "",
     meta: "Full-Stack Digital Professional",
     period: "2023 — 2026 (Now)",
     description:
