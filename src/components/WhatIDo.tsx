@@ -36,7 +36,7 @@ const WhatIDo = () => {
         </h2>
       </div>
       <div className="what-box">
-        <div className="what-box-in">
+        <div className="what-box-in what-box-in-4">
           <div className="what-border2">
             <svg width="100%">
               <line
@@ -59,82 +59,53 @@ const WhatIDo = () => {
               />
             </svg>
           </div>
-          <div
-            className="what-content what-noTouch"
-            ref={(el) => setRef(el, 0)}
-          >
-            <div className="what-border1">
-              <svg height="100%">
-                <line
-                  x1="0"
-                  y1="0"
-                  x2="100%"
-                  y2="0"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeDasharray="6,6"
-                />
-                <line
-                  x1="0"
-                  y1="100%"
-                  x2="100%"
-                  y2="100%"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeDasharray="6,6"
-                />
-              </svg>
-            </div>
-            <div className="what-corner"></div>
-
-            <div className="what-content-in">
-              <h3>{serviceCards[0].title}</h3>
-              <h4>{serviceCards[0].subtitle}</h4>
-              <p>{serviceCards[0].description}</p>
-              <h5>Skillset & tools</h5>
-              <div className="what-content-flex">
-                {serviceCards[0].tags.map((tag) => (
-                  <div className="what-tags" key={tag}>
-                    {tag}
-                  </div>
-                ))}
+          {serviceCards.map((card, index) => (
+            <div
+              className="what-content what-noTouch"
+              ref={(el) => setRef(el, index)}
+              key={index}
+            >
+              <div className="what-border1">
+                <svg height="100%">
+                  {index === 0 && (
+                    <line
+                      x1="0"
+                      y1="0"
+                      x2="100%"
+                      y2="0"
+                      stroke="white"
+                      strokeWidth="2"
+                      strokeDasharray="6,6"
+                    />
+                  )}
+                  <line
+                    x1="0"
+                    y1="100%"
+                    x2="100%"
+                    y2="100%"
+                    stroke="white"
+                    strokeWidth="2"
+                    strokeDasharray="6,6"
+                  />
+                </svg>
               </div>
-              <div className="what-arrow"></div>
-            </div>
-          </div>
-          <div
-            className="what-content what-noTouch"
-            ref={(el) => setRef(el, 1)}
-          >
-            <div className="what-border1">
-              <svg height="100%">
-                <line
-                  x1="0"
-                  y1="100%"
-                  x2="100%"
-                  y2="100%"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeDasharray="6,6"
-                />
-              </svg>
-            </div>
-            <div className="what-corner"></div>
-            <div className="what-content-in">
-              <h3>{serviceCards[1].title}</h3>
-              <h4>{serviceCards[1].subtitle}</h4>
-              <p>{serviceCards[1].description}</p>
-              <h5>Skillset & tools</h5>
-              <div className="what-content-flex">
-                {serviceCards[1].tags.map((tag) => (
-                  <div className="what-tags" key={tag}>
-                    {tag}
-                  </div>
-                ))}
+              <div className="what-corner"></div>
+              <div className="what-content-in">
+                <h3>{card.title}</h3>
+                <h4>{card.subtitle}</h4>
+                <p>{card.description}</p>
+                <h5>Skillset & tools</h5>
+                <div className="what-content-flex">
+                  {card.tags.map((tag) => (
+                    <div className="what-tags" key={tag}>
+                      {tag}
+                    </div>
+                  ))}
+                </div>
+                <div className="what-arrow"></div>
               </div>
-              <div className="what-arrow"></div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
