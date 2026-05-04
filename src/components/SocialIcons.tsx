@@ -1,13 +1,9 @@
 import {
-  FaGithub,
   FaInstagram,
   FaLinkedinIn,
-  FaYoutube,
 } from "react-icons/fa6";
 import "./styles/SocialIcons.css";
-import { TbNotes } from "react-icons/tb";
 import { useEffect } from "react";
-import HoverLinks from "./HoverLinks";
 import { profile } from "../data/portfolioData";
 
 const SocialIcons = () => {
@@ -61,18 +57,8 @@ const SocialIcons = () => {
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
         <span>
-          <a href={profile.githubHref} target="_blank" rel="noreferrer">
-            <FaGithub />
-          </a>
-        </span>
-        <span>
           <a href={profile.linkedinHref} target="_blank" rel="noreferrer">
             <FaLinkedinIn />
-          </a>
-        </span>
-        <span>
-          <a href={profile.youtubeHref} target="_blank" rel="noreferrer">
-            <FaYoutube />
           </a>
         </span>
         <span>
@@ -81,12 +67,6 @@ const SocialIcons = () => {
           </a>
         </span>
       </div>
-      <a className="resume-button" href={profile.udemyHref} target="_blank" rel="noreferrer">
-        <HoverLinks text="UDEMY" />
-        <span>
-          <TbNotes />
-        </span>
-      </a>
     </div>
   );
 };
