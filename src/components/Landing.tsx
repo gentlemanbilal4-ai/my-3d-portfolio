@@ -8,7 +8,7 @@ const Landing = ({ children }: PropsWithChildren) => {
       <div className="landing-section" id="landingDiv">
         <div className="landing-container">
           <div className="landing-intro">
-            <h2>Hello! I'm</h2>
+            <h2>I'm</h2>
             <h1>
               {profile.firstName}
               <br />
@@ -18,12 +18,12 @@ const Landing = ({ children }: PropsWithChildren) => {
           <div className="landing-info">
             <h3>{profile.rolePrefix} &</h3>
             <h2 className="landing-info-h2">
-              <div className="landing-h2-1">Developer</div>
-              <div className="landing-h2-2">Researcher</div>
+              <div className="landing-h2-1">{profile.rolePrimary}</div>
+              <div className="landing-h2-2">{profile.roleSecondary}</div>
             </h2>
             <h2>
-              <div className="landing-h2-info">Researcher</div>
-              <div className="landing-h2-info-1">Developer</div>
+              <div className="landing-h2-info">{profile.roleSecondary}</div>
+              <div className="landing-h2-info-1">{profile.rolePrimary}</div>
             </h2>
           </div>
         </div>
