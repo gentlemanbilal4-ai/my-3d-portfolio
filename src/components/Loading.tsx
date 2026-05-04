@@ -61,7 +61,7 @@ const Loading = ({ percent }: { percent: number }) => {
     <>
       <div className="loading-header">
         <a href="/#" className="loader-title" data-cursor="disable">
-          AM
+          BILAL X NOVA
         </a>
         <div className={`loaderGame ${clicked && "loader-out"}`}>
           <div className="loaderGame-container">
@@ -112,20 +112,20 @@ export const setProgress = (setLoading: (value: number) => void) => {
 
   let interval = setInterval(() => {
     if (percent <= 50) {
-      let rand = Math.round(Math.random() * 5);
-      percent = percent + rand;
+      let rand = Math.round(Math.random() * 10) + 3;
+      percent = Math.min(percent + rand, 50);
       setLoading(percent);
     } else {
       clearInterval(interval);
       interval = setInterval(() => {
-        percent = percent + Math.round(Math.random());
+        percent = percent + Math.round(Math.random() * 2) + 1;
         setLoading(percent);
         if (percent > 91) {
           clearInterval(interval);
         }
-      }, 2000);
+      }, 800);
     }
-  }, 100);
+  }, 60);
 
   function clear() {
     clearInterval(interval);
