@@ -1,45 +1,18 @@
-import { useEffect, useRef } from "react";
 import "./styles/WhatIDo.css";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { serviceCards } from "../data/portfolioData";
 
 const WhatIDo = () => {
-  const containerRef = useRef<(HTMLDivElement | null)[]>([]);
-  const setRef = (el: HTMLDivElement | null, index: number) => {
-    containerRef.current[index] = el;
-  };
-
-  useEffect(() => {
-    if (ScrollTrigger.isTouch) {
-      containerRef.current.forEach((container) => {
-        if (container) {
-          container.classList.remove("what-noTouch");
-          container.addEventListener("click", () => handleClick(container));
-        }
-      });
-    }
-    return () => {
-      containerRef.current.forEach((container) => {
-        if (container) {
-          container.removeEventListener("click", () => handleClick(container));
-        }
-      });
-    };
-  }, []);
-
   return (
     <div className="whatIDO">
-      {/* Left box: title */}
+      {/* Left: title */}
       <div className="what-box">
         <h2 className="title">
           W<span className="hat-h2">HAT</span>
-          <div>
-            I<span className="do-h2"> DO</span>
-          </div>
+          <div>I<span className="do-h2"> DO</span></div>
         </h2>
       </div>
 
-      {/* Right box: accordion cards */}
+      {/* Right: always-open cards */}
       <div className="what-box">
         <div className="what-box-in" style={{ display: "flex" }}>
           <div className="what-border2">
@@ -50,11 +23,7 @@ const WhatIDo = () => {
           </div>
 
           {serviceCards.map((card, index) => (
-            <div
-              className="what-content what-noTouch"
-              ref={(el) => setRef(el, index)}
-              key={index}
-            >
+            <div className="what-content what-open" key={index}>
               <div className="what-border1">
                 <svg height="100%">
                   {index === 0 && (
@@ -74,7 +43,6 @@ const WhatIDo = () => {
                     <div className="what-tags" key={tag}>{tag}</div>
                   ))}
                 </div>
-                <div className="what-arrow"></div>
               </div>
             </div>
           ))}
@@ -85,16 +53,3 @@ const WhatIDo = () => {
 };
 
 export default WhatIDo;
-
-function handleClick(container: HTMLDivElement) {
-  container.classList.toggle("what-content-active");
-  container.classList.remove("what-sibling");
-  if (container.parentElement) {
-    Array.from(container.parentElement.children).forEach((sibling) => {
-      if (sibling !== container) {
-        sibling.classList.remove("what-content-active");
-        sibling.classList.toggle("what-sibling");
-      }
-    });
-  }
-}
