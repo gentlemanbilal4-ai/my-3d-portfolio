@@ -1,11 +1,6 @@
 import { MdArrowOutward, MdCopyright } from "react-icons/md";
 import "./styles/Contact.css";
-import {
-  certifications,
-  education,
-  profile,
-  publications,
-} from "../data/portfolioData";
+import { profile } from "../data/portfolioData";
 
 const Contact = () => {
   return (
@@ -20,45 +15,34 @@ const Contact = () => {
               <MdArrowOutward />
             </a>
             <p className="contact-note">
-              Let&apos;s connect for blockchain development, smart contracts,
-              research collaborations, and technical consulting.
+              Let&apos;s connect for video editing, 3D design, web development,
+              and digital marketing projects. I&apos;m open to collaborations,
+              freelance work, and building complete digital solutions.
             </p>
           </div>
 
           <div className="contact-card">
             <h4>Profiles</h4>
             <div className="contact-links">
-              <a href={profile.githubHref} target="_blank" rel="noreferrer" data-cursor="disable" className="contact-social">
-                GitHub — Kamrankamil <MdArrowOutward />
+              <a
+                href={profile.linkedinHref}
+                target="_blank"
+                rel="noreferrer"
+                data-cursor="disable"
+                className="contact-social"
+              >
+                LinkedIn — gentlemanbilal <MdArrowOutward />
               </a>
-              <a href={profile.linkedinHref} target="_blank" rel="noreferrer" data-cursor="disable" className="contact-social">
-                LinkedIn — kamran-khan-788874187 <MdArrowOutward />
-              </a>
-              <a href={profile.youtubeHref} target="_blank" rel="noreferrer" data-cursor="disable" className="contact-social">
-                YouTube — @blocklearners <MdArrowOutward />
-              </a>
-              <a href={profile.instagramHref} target="_blank" rel="noreferrer" data-cursor="disable" className="contact-social">
+              <a
+                href={profile.instagramHref}
+                target="_blank"
+                rel="noreferrer"
+                data-cursor="disable"
+                className="contact-social"
+              >
                 Instagram — {profile.instagramLabel} <MdArrowOutward />
               </a>
-              <a href={profile.udemyHref} target="_blank" rel="noreferrer" data-cursor="disable" className="contact-social">
-                Udemy Profile <MdArrowOutward />
-              </a>
             </div>
-          </div>
-
-          <div className="contact-card">
-            <h4>Education</h4>
-            {education.map((item) => (
-              <p key={item} className="contact-meta-item">{item}</p>
-            ))}
-            <h4>Publications</h4>
-            {publications.map((item) => (
-              <p key={item} className="contact-meta-item">{item}</p>
-            ))}
-            <h4>Certifications</h4>
-            {certifications.map((item) => (
-              <p key={item} className="contact-meta-item">{item}</p>
-            ))}
             <h5 className="contact-copy">
               <MdCopyright /> 2026
             </h5>
